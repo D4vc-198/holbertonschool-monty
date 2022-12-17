@@ -65,7 +65,7 @@ void rotr(stack_t **stack, unsigned int line_number);
 struct GlobalStruct
 {
 	int data;
-	FILE *fm = NULL;
+	FILE *fm;
 } globes;
 
 #endif
