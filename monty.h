@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <string.h>
 
+int main(int argc, char *argv[]);
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -59,12 +60,4 @@ struct GlobalStruct
 	int data;
 } globes;
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <string.h>
 #endif
