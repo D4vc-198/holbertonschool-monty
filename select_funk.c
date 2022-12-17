@@ -2,7 +2,8 @@
 /**
  * opcomp - check command in dictionary
  * @opcode: the string name that is extracted by sscanf from getline
- *
+ * @stack: dptr to stack
+ * @line_number: line number of monty file
  * Return: function pointer or null if no match
  */
 void opcomp(stack_t **stack, unsigned int line_number, char *opcode)
@@ -30,5 +31,6 @@ void opcomp(stack_t **stack, unsigned int line_number, char *opcode)
 		index++;
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+	exit_free(*stack);
 	exit(EXIT_FAILURE);
 }
