@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 	int matches = 0;
 	unsigned int line_number = 0;
 
-	if (argc != 2)	/* if too many or too few arguments to monty exit fail */
+	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	globes.fm = NULL;
-	globes.fm = fopen(argv[1], "r"); /* not freed must close file */
-	if (globes.fm == NULL)	/* if file cant open then exit fail */
+	globes.fm = fopen(argv[1], "r");
+	if (globes.fm == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		fclose(globes.fm);
@@ -49,7 +49,6 @@ int main(int argc, char *argv[])
 	exit_free(stack);
 	return (0);
 }
-
 /**
  * free_stack - free a stack with single ptr reference
  * @stack: pointer to a ll
@@ -80,7 +79,6 @@ void exit_free(stack_t *stack)
 }
 /**
  * _iswhitespace - check for whitespace
- *
  * Return: 1 if only whitespace 0 if not only whitespace
  */
 int _iswhitespace(void)
